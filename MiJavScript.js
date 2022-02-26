@@ -34,11 +34,12 @@ document.write("<p class = Preguntas> Los cubos del 0 al numero ingresado </p>")
 for (let i = 0; i <= numero; i++) {
   document.write("<p class = Answers>",i*i*i,"</p>");
 }
-var arreglo = new Array(0,0,5,0,-9,-6,7);
-var ceros = 0;
-var negativos = 0;
-var mayoresACero = 0;
+const arreglo = new Array(0,0,5,0,-9,-6,7);
 function contador(miArreglo){
+
+  var ceros = 0;
+  var negativos = 0;
+  var mayoresACero = 0;
   for (let i = 0; i<= miArreglo.length;i++){
     if(miArreglo[i]==0){
       ceros++;
@@ -50,31 +51,31 @@ function contador(miArreglo){
       mayoresACero++;
     }
   }
+  document.write("<p class = Preguntas> El numero de 0's en el arreglo del codigo son: </p>");
+  document.write("<p class = Answers>",ceros,"</p>");
+  document.write("<p class = Preguntas> El numero de numeros negativos en el arreglo del codigo son: </p>");
+  document.write("<p class = Answers>",negativos,"</p>");
+  document.write("<p class = Preguntas> El numero de numeros mayores a cero en el arreglo del codigo son: </p>");
+  document.write("<p class = Answers>",mayoresACero,"</p>");
 }
 contador(arreglo);
-document.write("<p class = Preguntas> El numero de 0's en el arreglo del codigo son: </p>");
-document.write("<p class = Answers>",ceros,"</p>");
-document.write("<p class = Preguntas> El numero de numeros negativos en el arreglo del codigo son: </p>");
-document.write("<p class = Answers>",negativos,"</p>");
-document.write("<p class = Preguntas> El numero de numeros mayores a cero en el arreglo del codigo son: </p>");
-document.write("<p class = Answers>",mayoresACero,"</p>");
 
-var arreglo = [[1,3],[6,4]];
-var suma = 0;
-var promedio = 0;
 
 function promedios(otroArreglo){
+  var arreglo = [[1,3],[6,4]];
+  var suma = 0;
+  var promedio = 0;
   for(var i=0; i< otroArreglo.length; i++) {
     var x = otroArreglo[i];
     for(var j=0; j< x.length; j++) {
       suma   = suma + x[j];
     }
    }
+   document.write("<p class = Preguntas> promedio del arreglo del codigo: </p>");
+   promedio = suma/2;
+   document.write("<p class = Answers>",promedio,"</p>");
 }
 promedios(arreglo);
-document.write("<p class = Preguntas> promedio del arreglo del codigo: </p>");
-promedio = suma/2;
-document.write("<p class = Answers>",promedio,"</p>");
 
 document.write("<p class = Preguntas> Del numero ingresado hasta -10 digitos </p>");
 for (let i = numero; i >= -10; i--) {

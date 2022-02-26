@@ -151,6 +151,7 @@
 				<li>Disposición: El ciclo de vida acaba y el sistema queda obsoleto por lo que es desechado y se retira de funcionamiento</li>
 			</ol>
 		</ol>
+
 	</section>
 </div>
 <div>
@@ -174,11 +175,6 @@
   </ol>
 </div>
 <div>
-  <script src="MiJavScript.js">
-
-  </script>
-</div>
-<div>
   <ol>
     <li class="Preguntas">¿Qué diferencias y semejanzas hay entre Java y JavaScript?</li>
     <p class="Answers">La diferencia mas grande es que JavaScript es un lenguaje interpretado y Java es compilado. otra cosa es que JavaScript puede usar la programacion orientada a objetos
@@ -191,9 +187,72 @@
     <p class="Answers"> con let seguido del nombre de la variable</p>
     <li class="Preguntas">¿Qué implicaciones tiene utilizar variables globales dentro de funciones? </li>
     <p class="Answers"> Que no son seguras y pueden ser usadas en cualquier lugar del codigo y por lo tanto pueden ser modificadas cuando y donde sea por es es que no son seguras. </p>
+    <li class ="Preguntas">¿Por qué es una buena práctica usar JavaScript para checar que sean válidos los inputs de las formas antes de enviar los datos al servidor? </li>
+    <p class="Answers"> Es una buena practica porque con JavaScript podemos validar que la informacion ingresada en los inputs sea la correcta </p>
+    <li class ="Preguntas"> ¿Cómo puedes saltarte la seguridad de validaciones hechas con JavaScript?</li>
+    <p class="Answers"> Ideralmente con un codigo bien estructurado y bien hecho seria muy dificil saltarse la seguridad de verificacion de JavaScript
+    sin embargo no es imposible lograrlo</p>
+    <li class ="Preguntas">Si te puedes saltar la seguridad de las validaciones de JavaScript, entonces ¿por qué la primera pregunta dice que es una buena práctica? </li>
+    <p class="Answers"> personalemente pienso que es dificil saltarse la seguridad de verificacion de JavaScript pero no es imposible
+    como lo veo yo la tecnologia no es infalible al 100% ya que esta hecha por humanos y los humanos nos equivocamos de vez en cuando </p>
   </ol>
 </div>
-</body>
+
+<div>
+  <label for="txt_confirmar">Contraseña</label>
+  <input type="password"  id = "txt_confirmar" placeholder="Ejem pepito">
+</div>
+<div>
+  <label for="txt_contraseña" >Contraseña</label>
+  <input type="password" id = "txt_contraseña" placeholder="Ejem pepito">
+</div>
+<div>
+  <button type="button" id="boton" onclick="validarformulario()">Submit</button>
+</div>
+
+<section>
+  <h1 class ="Preguntas">Tienda OtakuWorld!!!</h1>
+  <h2 class ="Preguntas">Por ahora solo contamos con un articulo de cada producto y si te llevas uno te llevas todos :D sino no te llevas nada :)</h2>
+  <div id="Productos">
+    <h2>Rengoku Chikito </h2>
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTFg4cOPovaWk-lBGqzX9-7KLqSCJnTodsg5JR5g54IPVjL7jCH1c4mHvvd3Ba0Ypg26yE&usqp=CAU" width="400" height="400" title="Rengoku Chikito :3">
+    <p class="Answers">Precio: 12 Dolares</p>
+    <button type="button" id="boton" onclick="agregar()">Agregar</button>
+    <button type="button" id="boton" onclick="eliminar()">Eliminar</button>
+    <label>numero de productos:</label>
+    <label id="rengoku"> 0 </label>
+  </div>
+  <div>
+    <h2>Tanjiro Chikito </h2>
+    <img src="https://m.media-amazon.com/images/I/71u7xfR6lQL._AC_SL1500_.jpg" width="400" height="600" title="Tanjiro Chikito :3">
+    <p class="Answers">Precio: 10 Dolares</p>
+    <button type="button" id="boton" onclick="agregar()">Agregar</button>
+    <button type="button" id="boton" onclick="eliminar()">Eliminar</button>
+    <label for="producto">numero de productos: </label>
+    <label>numero de productos:</label>
+    <label id="tanjiro"> 0 </label>
+  </div>
+
+  <div>
+    <h2>Tomioka Chikito </h2>
+    <img src="https://otsukai.com/public/item/41263/original-5f3d35d6daac0.png" width="400" height="400" title="Tomioka Chikito :3">
+    <p class="Answers">Precio: 10 Dolares</p>
+    <button type="button" id="boton" onclick="agregar()">Agregar</button>
+    <button type="button" id="boton" onclick="eliminar()">Eliminar</button>
+    <label>numero de productos:</label>
+    <label id="tomioka"> 0 </label>
+  </div>
+</section>
+
+<section>
+  <label>El total de tu compra es:</label>
+  <label id="compra"> 0 Dolares con IVA incluido</label>
+</section>
+
 <footer id="Datos"> <b>Hecho con el editor de texto Atom. si quieres saber mas ingresa a la pagina web de atom con el siguiente enlace
 <a target="_blank" href="https://atom.io/"> https://atom.io/</a></b>
 </footer>
+
+<script src="Lab6.js"></script>
+
+</body>
