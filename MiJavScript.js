@@ -68,7 +68,7 @@ function promedios(otroArreglo){
   for(var i=0; i< otroArreglo.length; i++) {
     var x = otroArreglo[i];
     for(var j=0; j< x.length; j++) {
-      suma   = suma + x[j];
+      suma = suma + x[j];
     }
    }
    document.write("<p class = Preguntas> promedio del arreglo del codigo: </p>");
