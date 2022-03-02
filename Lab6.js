@@ -24,7 +24,7 @@ function agregar(){
   let label_rengoku = document.getElementById("rengoku");
   label_rengoku.innerHTML = 1;
   label_compra = document.getElementById("compra");
-  label_compra.innerHTML = 35 + "Dolares con IVA incluido"
+  label_compra.innerHTML = 35 + " Dolares con IVA incluido"
 }
 
 function eliminar(){
