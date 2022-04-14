@@ -9,15 +9,14 @@ module.exports = class User {
      }
     save() {
         return bcrypt.hash(this.password, 12)
-            .then( (password_cifrado) => {
-                return db.execute('CALL RegistrarUsuario(?,?,?)',
-                    [this.usuario, password_cifrado, this.nombre]);
+            .then((password_cifrado) => {
+                console.log("Insertando usuario");
+                return db.execute('CALL RegistrarUsuario(?,?,?)',[this.usuario, password_cifrado, this.nombre]);
             }).catch((err) => {
                 console.log(err);
             });
     }
     static findOne(usuario) {
-        return db.execute(
-            'SELECT * FROM usuarios WHERE username=?', [usuario]);
+        return db.execute('SELECT * FROM usuarios WHERE username=?', [usuario]);
      }
    }
