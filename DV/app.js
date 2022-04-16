@@ -5,8 +5,10 @@ const misRutas = require('./routes/routes.js');
 const session = require('express-session');
 const cookieParser = require('cookie-parser');
 const multer = require('multer');
+const genre = require('jikan-nodejs');
 const path = require('path');
 app.set('view engine', 'ejs');
+
 
 app.set('views',__dirname + '/views');
 app.use(express.static(path.join(__dirname, 'uploads')));

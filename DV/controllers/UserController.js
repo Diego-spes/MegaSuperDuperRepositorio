@@ -3,7 +3,6 @@ const path = require('path');
 const User = require('../models/Usuario');
 const bcrypt = require('bcryptjs');
 
-
 //Controladores del Login
 exports.get_login = (request, response, next) => {
     response.render('Login', {
@@ -46,7 +45,7 @@ exports.post_login =  (request, response, next) => {
 };
 // Controladores del Singup
 exports.get_signup =  (request, response, next) => {
-    response.render('/users/Signup.ejs', {
+    response.render('Signup.ejs', {
         usuario: request.session.usuario ? request.session.usuario : '',
     });
 };
