@@ -19,4 +19,9 @@ module.exports = class User {
     static findOne(usuario) {
         return db.execute('SELECT * FROM usuarios WHERE username=?', [usuario]);
      }
+  
+
+   static get_rol(usuario){
+    return db.execute('SELECT rol FROM usuarios WHERE username=?', [usuario])
    }
+};

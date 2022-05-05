@@ -13,7 +13,7 @@ router.get('/Logout', userController.logout);
 router.get('/Signup', userController.get_signup);
 router.post('/Signup', userController.post_signup);
 //Pagina principal
-router.use('/Home',isAuth, userController.get_Home)
+router.get('/Home',isAuth, userController.get_Home)
 //imagenes
 router.use('/imagenes',isAuth, userController.post_image);
 module.exports = router;

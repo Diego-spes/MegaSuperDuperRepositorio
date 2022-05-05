@@ -2,6 +2,7 @@ const path = require('path');
 //Controladores
 const User = require('../models/Usuario');
 const bcrypt = require('bcryptjs');
+const { log } = require('console');
 
 //Controladores del Login
 exports.get_login = (request, response, next) => {
@@ -16,6 +17,7 @@ exports.root = (request, response, next) => {
 };
 
 exports.post_login =  (request, response, next) => {
+
   User.findOne(request.body.nombre)
         .then(([rows, fieldData]) => {
             console.log(request.body.nombre)
@@ -38,7 +40,9 @@ exports.post_login =  (request, response, next) => {
                     response.redirect('/users/Login');
                 }).catch(err => {
                     response.redirect('/users/login');
-                });
+                });    
+            request.session.rol = rows[0].rol;  
+            console.log(request.session.rol = rows[0].rol);
         }).catch((err) => {
             console.log(err);
         });
@@ -75,5 +79,9 @@ exports.logout =  (request, response, next) => {
 //Controladores de Pagina principal 
 
 exports.get_Home =  (request, response, next) => {
-    response.render('Mipagina');
+    log("get home");
+    response.render('Mipagina',{
+        usuario: request.session.usuario ? request.session.usuario : '',   
+    });
+    
 };
